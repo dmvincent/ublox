@@ -133,7 +133,9 @@ void UbloxNode::addProductInterface(std::string product_category,
 }
 
 void UbloxNode::getRosParams() {
-  nh->param("device", device_, std::string("/dev/ttyACM0"));
+  // Editing the below line to chane UART port
+  //nh->param("device", device_, std::string("/dev/ttyACM0"));
+  nh->param("device", device_, std::string("/dev/ttyTHS2"));
   nh->param("frame_id", frame_id, std::string("gps"));
 
   // Save configuration parameters
